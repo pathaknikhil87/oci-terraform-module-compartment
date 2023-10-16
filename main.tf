@@ -10,7 +10,7 @@ terraform {
 
 resource "oci_identity_compartment" "compartment" {
   compartment_id = var.compartment_parent_id
-  description    = var.compartment_description
+  description    = format("%s %s", "change done for", var.compartment_description)
   name           = var.compartment_name
   enable_delete  = var.enable_compartment_delete
 }
